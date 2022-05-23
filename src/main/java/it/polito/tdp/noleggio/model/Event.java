@@ -4,7 +4,11 @@ import java.time.LocalTime;
 
 public class Event implements Comparable<Event>{
 	
-	public enum EventType {
+	public enum EventType { 
+		/*ENUMERAZIONE : CLASSE DEGENERE CHE DEFINISCE UNA SERIE DI COSTANTI 
+		  DEFINISCO LA COSTANTE IN MODO SIMBOLICO DANDOGLI UN TIPO DI DATO 
+		 
+		  NON ASSEGNO DEI VALORI IN QUESTO CASO */
 		NUOVO_CLIENTE,
 		AUTO_RESTITUITA
 	}
@@ -57,6 +61,7 @@ public class Event implements Comparable<Event>{
 		return true;
 	}
 	@Override
+	//VERRANNO PRIMA GLI EVENTI CHE HANNO UN TEMPO INFERIORE -> SEMPRE DEL SIMULATORE DEGLI EVENTI
 	public int compareTo(Event other) {
 		return this.time.compareTo(other.time);
 	}
